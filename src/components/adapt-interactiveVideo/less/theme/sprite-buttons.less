@@ -1,0 +1,171 @@
+.sprite {
+	.item-button {
+		.iv-border-radius;
+		vertical-align: middle;
+		position: relative;
+
+		.item-button-text {
+			position:relative;
+		}
+
+		.background-graphic {
+			overflow: hidden;
+		}
+
+		.graphic-only .graphic {
+			padding: 0px;
+		}
+
+		&.selected:before {
+			.iv-border-radius;
+			content: "";
+			position: absolute;
+			top: -0.3em;
+			left: -0.3em;
+			right: -0.3em;
+			bottom: -0.3em;
+		}
+	}
+
+	.continue-button-container {
+		text-align: center;
+	}
+
+	&.button-caps .item-button {
+		text-transform: uppercase;
+	}
+
+	&.button-2 {
+		.item-button {
+			margin: 1em 4em;
+		}
+
+		&.button-circle .item-button {
+
+		}
+	}
+
+	&.button-3 {
+		.item-button {
+			margin: 1em 1em;
+		}
+
+		&.button-circle .item-button {
+			margin: 1em 2em;
+		}
+	}
+
+	&.button-4 {
+		.item-button {
+			margin: 1em 1em;
+		}
+
+		&.button-circle .item-button {
+			margin: 1em 1em;
+		}
+	}
+
+	&.button-rect .item-button,
+	&.button-tall-rect .item-button {
+		padding: 0.9em;
+		width: 14em;
+	}
+
+	&.button-circle .item-button {
+		border-radius: 50%;
+		padding: 0.9em;
+		width:10em;
+		height:10em;
+
+		&.selected:before {
+			border-radius: 50%;
+		}
+
+		.background-graphic {
+			border-radius: 50%;
+		}
+	}
+
+	&.button-tall-rect .item-button {
+	    height: 6em;
+	}
+
+	&.button-extra-tall-rect .item-button {
+	    height: 9em;
+	}
+	
+
+	.video.light &, 
+    .video .sprites.light &,
+    .video .sprites &.light {
+
+		.item-button {
+			.iv-transparent-background;
+			border-color: white;
+			color: white;
+
+			&:hover {		
+				.iv-clickable_light;
+			}
+
+			&.selected:before {
+				border: white;
+			}
+		}
+
+		&.button-circle .item-button:hover {
+			opacity: 0.8;
+		}
+
+		&.button-outline .item-button {
+			border: 0.1em solid white;
+		}
+
+		&.button-select-outline .item-button.selected:before {
+			border: 0.1em solid white;
+		}
+
+		&.button-select-invert .item-button.selected {
+			color: black;
+			background: white;
+		}
+	}
+
+
+	.video.dark &, 
+    .video .sprites.dark &,
+    .video .sprites &.dark {
+
+		.item-button {
+			.iv-transparent-background;
+			border-color: black;
+			color: black;
+
+			&:hover {		
+				.iv-clickable_dark;
+			}
+
+			&.selected:before {
+				border: black;
+			}
+		}
+
+		&.button-circle .item-button:hover {
+			opacity: 0.8;
+		}
+
+		&.button-outline .item-button {
+			border: 0.1em solid black;
+		}
+
+		&.button-select-outline .item-button.selected:before {
+			border: 0.1em solid black;
+		}
+
+		&.button-select-invert .item-button.selected {
+			color: white;
+			background: black;
+		}
+	}
+
+}

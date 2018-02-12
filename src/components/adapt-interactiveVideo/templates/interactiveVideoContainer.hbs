@@ -1,0 +1,32 @@
+<div class="ios-fix" tabindex="0" role="presentation" arial-label="."></div>
+<div class="tracks track-container {{trackClassName}}" style="font-size:{{fontSize}}px;{{#if trackHeight}}height:{{trackHeight}};{{/if}}{{#if trackWidth}}width:{{trackWidth}};{{/if}}{{#if trackTop}}top:{{trackTop}};{{/if}}{{#if trackLeft}}left:{{trackLeft}};{{/if}}">
+	<div class="track-container-outer" style="{{#if trackContainerWidth}}width:{{trackContainerWidth}};{{/if}}">
+		<div class="track-container-inner">
+			{{#each model._config._tracks}}
+			<div class="track {{#if isActive}}active{{else}}inactive{{/if}} {{_className}}" id="track-{{_id}}" view-container="true"></div>
+			{{/each}}
+		</div>
+	</div>
+</div>
+<div class="sprites sprites-container {{trackClassName}} {{#if isTrackLoading}}track-loading{{else}}track-not-loading{{/if}} {{#if isPlaying}} playing{{else}} {{#if isContinueLocked}} continue-locked{{else}} paused{{/if}}{{/if}}{{#if hidden}} hidden{{/if}} {{#if mouse}}mouse-on{{else}}mouse-off{{/if}}">
+	<div class="sprites-container-outer">
+		<div class="sprites-container-inner" view-container="true"  style="font-size:{{fontSize}}px;{{#if height}}height:{{height}}px;{{/if}}{{#if width}}width:{{width}}px;{{/if}}{{#if top}}top:{{top}}px;{{/if}}{{#if left}}left:{{left}}px;{{/if}}"></div>
+		<div class="sprites-container-statics" view-container="true" style="font-size:{{fontSize}}px;{{#if height}}height:{{height}}px;{{/if}}{{#if width}}width:{{width}}px;{{/if}}{{#if top}}top:{{top}}px;{{/if}}{{#if left}}left:{{left}}px;{{/if}}">
+		</div>
+	</div>
+	<div class="track-loading-container">
+		<div class="track-loading-inner">
+			<span class="loader-gif"></div>
+		</div>
+	</div>
+</div>
+<div class="preloader-container">
+	<div class="image-preloader preloader">
+		{{#each _preloadImages }}
+			<img src="{{this}}">
+		{{/each}}
+	</div>
+	<div class="sprite-preloader preloader"  view-container="true">
+	</div>
+</div>
+<link href="{{_path}}/assets/video.css" rel="stylesheet" type="text/css">

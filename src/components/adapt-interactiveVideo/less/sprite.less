@@ -1,0 +1,71 @@
+.interactivevideo-container {
+
+
+	.sprites-container {
+		transition: opacity 2s ease-in;
+		opacity: 0;
+	}
+
+	button {
+		line-height: 1.4em;
+	    font-size: 1em;
+	    min-height: auto;
+	    min-height: initial;
+	    padding: 0.5em 0em;
+	}
+	
+	&.is-ready {
+		.sprites-container {
+			opacity: 1;
+		}
+	}
+
+	.sprites-container {
+
+		.sprite {
+			
+			cursor: auto;
+			z-index: 2;
+
+			&.anim-in.force-show {
+				z-index: 2;
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&.anim-in {
+				z-index: 0;
+				opacity: 0;
+				visibility: hidden;
+
+				*, *:hover {
+					cursor: default !important;
+				}
+			}
+
+			&.anim {
+				transition: opacity 0.5s ease-in 0.7s;
+				-webkit-transition: opacity 0.5s ease-in 0.7s;
+				opacity: 1;
+				visibility: visible;	
+				height: 100%;			
+				&.noanim {
+					transition: opacity 0.1s ease-in 0.1s;
+					-webkit-transition: opacity 0.1s ease-in 0.1s;
+				}
+			}
+
+			&.anim-out {
+				z-index: 0;
+				transition: opacity 0.3s ease-out;
+				-webkit-transition: opacity 0.3s ease-out;
+				opacity: 0;
+
+				*, *:hover {
+					cursor: default !important;
+				}
+			}
+
+		}
+	}
+}

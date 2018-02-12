@@ -1,0 +1,45 @@
+// ====================================================================================================
+// Hotgrid styling
+// ====================================================================================================
+.hotgrid-component {
+	.hotgrid-grid-item {
+		.hotgrid-item-image {
+			border: 3px solid transparent;
+			margin: 2.5%;
+			width: 95%;
+
+			&.visited {
+				.hotgrid-item-image {
+					position: relative;
+
+					&:after {
+						content: "";
+						background-color: fade(@visited-color, 50%);
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+
+			&.border-radius {
+				border-radius: 50%;
+
+				&.visited {
+					&:after {
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+
+		.no-touch &:hover {
+			.hotgrid-item-states-css.hotgrid-item-image {
+				border-color: @components-color;
+				.transition-border-color;
+			}
+		}
+	}
+}

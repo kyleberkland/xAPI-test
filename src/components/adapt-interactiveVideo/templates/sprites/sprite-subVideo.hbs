@@ -1,0 +1,60 @@
+<div class="sprite-subvideo-inner {{#if model.isPlaying}} playing{{else}} paused{{/if}}{{#if model.hidden}} hidden{{/if}}">
+	<div class="outer">
+		<div class="inner">
+			<div class="media" view-container="true">
+			</div>
+			<div class="outer-text"> 
+				{{#ifor outerTitle outerBody outerInstruction}}
+				{{#if outerTitle}}
+				<div class="title-text">
+				{{{compile outerTitle @root}}}
+				</div>
+				{{/if}}
+				{{#if outerBody}}
+				<div class="body-text">
+					{{{compile outerBody @root}}}
+				</div>
+				{{/if}}
+				{{#if outerInstruction}}
+				<div class="instruction-text">
+					{{{compile outerInstruction @root}}}
+				</div>
+				{{/if}}
+				{{/ifor}}
+			</div>
+			<div class="cover">
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+		<div class="inner">
+			{{#ifor title body instruction}}
+				<div class="header">
+					{{#if title}}
+					<div class="title-text">
+					{{{compile title @root}}}
+					</div>
+					{{/if}}
+					{{#if body}}
+					<div class="body-text">
+						{{{compile body @root}}}
+					</div>
+					{{/if}}
+					{{#if instruction}}
+					<div class="instruction-text">
+						{{{compile instruction @root}}}
+					</div>
+					{{/if}}
+				</div>
+			{{/ifor}}
+			<button class="play-button iv-play-button">
+
+			</button>
+		</div>
+	</div>
+	{{#if _endOnClose}}
+	<button class="close-button iv-close-button">
+
+	</button>
+	{{/if}}
+</div>

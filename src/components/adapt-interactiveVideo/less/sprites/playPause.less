@@ -1,0 +1,83 @@
+.sprite.sprite-playpause {
+	transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+	position: absolute;
+    top: 7%;
+    right: 0;
+    bottom: 7%;
+    left: 0;
+
+    cursor: inherit !important;
+
+    &.sprite {
+        z-index: 0 !important;
+    }
+
+    .overlay {
+        .iv-transparent-background;
+        position: absolute;
+        top: 2em;
+        left: 0;
+        right:0;
+        bottom: 2em;
+        display:block;
+
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+
+        .inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    }
+
+    .play-button {
+
+        .paused & {
+            opacity: 1;
+        }
+
+        .playing &,
+        .continue-locked & { 
+            opacity: 0;
+        }
+
+        .hidden & { 
+            display: none;
+        }
+
+    }
+}
+
+.mouse-off {
+    cursor: none;
+
+    .no-touch & {
+    	.sprite-playpause {
+    		opacity: 0 !important;
+    	}
+    }
+
+    .touch & {
+        .sprite-playpause {
+            opacity: 1 !important;
+        }
+    }
+}
+
+.mouse-on, .mouse-off.paused {
+    cursor: inherit;
+	.sprite-playpause {
+		opacity: 1 !important;
+	}
+}
+
+.mouse-on.paused {
+    .sprite-playpause {
+        z-index: 1000 !important;
+    }
+}

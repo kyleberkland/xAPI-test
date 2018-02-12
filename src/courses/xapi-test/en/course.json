@@ -1,0 +1,15 @@
+{
+    "_id":"course",
+    "_type":"course",
+    "title":"Adapt",
+    "body":"This is the first version of the open source re-architecture",
+    "_xapi": {
+        "_isEnabled": true,
+        "_activityID" : "https://trial-lrs.yetanalytics.io/xapi",
+        "_tracking": {
+            "_requireCourseCompleted": true,
+            "_requireAssessmentPassed": false,
+            "_shouldSubmitScore": false
+        }
+    }
+}

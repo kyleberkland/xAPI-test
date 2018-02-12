@@ -1,0 +1,25 @@
+{
+  "name": "adapt-xapi",
+  "version": "0.0.6",
+  "homepage": "https://github.com/LearningPool/adapt-xapi",
+  "authors": [
+    "Dennis Heaney <dennis@learningpool.com>",
+    "Barry McKay <barry@learningpool.com>",
+    "Andy Bell <andrewb@learningpool.com>"
+  ],
+  "displayName" : "xAPI",
+  "extension" : "xapi",
+  "description": "An extension to track learner activity via xAPI",
+  "main": "/js/adapt-xapi.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension",
+    "tincan",
+    "tin can",
+    "xapi",
+    "experience api",
+    "tracking"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_xapi"
+}

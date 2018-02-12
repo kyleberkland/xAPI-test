@@ -1,0 +1,180 @@
+.sprite.modal {
+	position: absolute;
+    top: 7%;
+    left: 7%;
+    bottom: 7%;
+    right: 7%;
+
+    .outer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .inner {
+        /*position:absolute;*/
+        width: 100%;
+    }
+
+    .background-graphic {
+        position:absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .header {
+        text-align: center;
+
+        .title-text {
+            font-size: 2.6em;
+            font-weight: lighter;
+            text-transform: uppercase;
+            padding-bottom: 1em;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+
+        .body-text {
+            font-size: 1em;
+            font-weight: lighter;
+            padding-bottom: 1em;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+
+        .instruction-text {
+            font-size: 1em;
+            font-weight: lighter;
+            padding-bottom: 1em;
+            padding-left: 4em;
+            padding-right: 4em;
+        }
+
+    }
+
+    .items {
+        text-align: center;
+    }
+
+    .graphic {
+        
+    }
+
+    .footer {
+        text-align: center;
+
+        .feedback-text {
+            font-size: 1em;
+            font-weight: lighter;
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+    }
+
+
+    .video.light &, 
+    .video .sprites.light &,
+    .video .sprites &.light {
+        color: white;
+    }
+
+
+    .video.dark &, 
+    .video .sprites.dark &,
+    .video .sprites &.dark {
+        color: black;
+    }
+
+
+    &.center-center {
+        .inner {
+            position:absolute;
+            top:48%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+        }
+    }
+
+    &.center-top {
+        .inner {
+            position:absolute;
+            top:0;
+            left:50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+        }
+    }
+
+    &.center-bottom {
+        .inner {
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+        }
+    }
+
+    &.left-center {
+        .inner {
+            position:absolute;
+            bottom:50%;
+            left:0;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+    }
+
+    &.right-center {
+        .inner {
+            position:absolute;
+            bottom:50%;
+            right:0;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+    }
+
+    &.left-top {
+        .inner {
+            position:absolute;
+            top:0;
+            left:0;
+        }
+    }
+
+    &.left-bottom {
+        .inner {
+            position:absolute;
+            bottom:0;
+            left:0;
+        }
+    }
+
+    &.right-top {
+        .inner {
+            position:absolute;
+            top:0;
+            right:0;
+        }
+    }
+
+    &.right-bottom {
+        .inner {
+            position:absolute;
+            right:0;
+            bottom:0;
+        }
+    }
+
+}

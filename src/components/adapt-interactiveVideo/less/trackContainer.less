@@ -1,0 +1,88 @@
+.interactivevideo-container {
+
+	.track-container-inner {
+		overflow: visible;
+	}
+
+	&.not-wider-ratio {
+		.track-container {
+
+			position:relative;
+			width:100%;
+			height:100%;
+			display: table;
+
+			.track-container-outer {
+				display: table-cell;
+			    vertical-align: middle;
+			    text-align: center;
+			}
+
+			.track-container-inner {
+				&:after {
+					content: "";
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    bottom: 0;
+				    right: 0;
+				    //box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4) inset;
+				    background: transparent;
+				}
+				position:relative;
+				z-index: 0;
+			}
+
+		}
+	}
+
+	&.is-wider-ratio {
+		.track-container {
+
+			position:relative;
+			width:100%;
+			height:100%;
+
+			.track-container-outer {
+				&:after {
+					content: "";
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    bottom: 0;
+				    right: 0;
+				    //box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4) inset;
+				    background: transparent;
+				}
+				height:100%;
+				text-align: center;
+			}
+
+			.track-container-inner {
+				z-index: 0;
+				height:100%;
+			}
+
+		}
+	}
+
+	&.is-fillwindow {
+		&:after {
+			content: "";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    //box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4) inset;
+		    background: transparent;
+		}
+		.track-container-outer,
+		.track-container-inner {
+			&:after {
+				box-shadow: none !important;
+			}
+		}
+	}
+
+}

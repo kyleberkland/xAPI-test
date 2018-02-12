@@ -1,0 +1,16 @@
+{{#if model._showPlayPause}}
+<div class="play-pause">
+	<button>
+	</button>
+</div>
+{{/if}}
+<div class="outer {{#if model._showPlayPause}}play-pause-padding{{/if}}">
+	<div class="inner" style="width:{{model.width}}px;">
+		{{#each _sprites}}
+			<div class="scrub-sprite-marker {{#if isVisited}}visited{{/if}}" style="left:{{left}};">
+
+			</div>
+		{{/each}}
+
+	</div>
+</div>

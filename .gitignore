@@ -1,0 +1,15 @@
+builds
+bower_components
+node_modules
+buildkit
+.buildkit
+rub
+rub.bat
+_assets
+rub-check.log
+rubconfig.json.tmp
+.DS_Store
+.idea
+*.zip
+*.tmp
+*.log

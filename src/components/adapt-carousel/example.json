@@ -1,0 +1,85 @@
+{
+    "_id":"c-05",
+    "_parentId":"b-05",
+    "_type": "component",
+    "_component": "carousel",
+    "_classes": "not-accessible",
+    "_layout": "full",
+    "title": "Working with the world’s biggest brands",
+    "displayTitle": "Working with the world’s biggest brands",
+    "body": "",
+    "instruction": "",
+    "_animation": {
+        "_type": "roundrobin",
+        "_minWidth": 180,
+        "_maxWidth": 200,
+        "_interval": 3500,
+        "_duration": 1500
+    },
+    "_items": [
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-1.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-2.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-3.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-4.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-5.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-6.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-7.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-8.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-9.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-10.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-11.png"
+            }
+        },
+        {
+            "_graphic": {
+                "src": "course/en/images/c35-12.png"
+            }
+        }
+
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

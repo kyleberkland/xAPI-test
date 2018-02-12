@@ -1,0 +1,20 @@
+<button class="item-button {{#if isGraphicOnly}}graphic-only{{/if}} {{#if isVisited}}visited{{else}}not-visited{{/if}} {{#if isSelected}}selected{{else}}not-selected{{/if}} {{#if isDisabled}}disabled{{/if}}" {{#if isDisabled}}disabled="disabled"{{/if}} index="{{@index}}">
+	{{#if _backgroundGraphic}}
+		<div class="background-graphic" style="background-image:url({{_backgroundGraphic}});">
+		</div>
+	{{/if}}
+	{{#if text}}
+		<span class="item-button-text">
+		{{{compile text @root}}}
+		</span>
+	{{/if}}
+	{{#if _graphic}}
+		<div class="graphic">
+			<img src="{{_graphic}}">
+		</div>
+	{{/if}}
+</button>
+<div class="caption{{#if wasClicked}} clicked{{/if}}">
+	<div class="caption-text">{{captionText}}</div>
+	<button class="caption-close iv-close-button"></div>
+</div>

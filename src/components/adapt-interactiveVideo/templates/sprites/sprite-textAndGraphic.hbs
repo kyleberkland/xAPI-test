@@ -1,0 +1,53 @@
+{{#if _backgroundGraphic}}
+<div class="background-graphic" style="background-image:url({{_backgroundGraphic}});">
+</div>
+{{/if}}
+<div class="outer">
+	<div class="inner">
+		{{#ifor title body instruction}}
+		<div class="header">
+			{{#if title}}
+			<div class="title-text">
+			{{{compile title @root}}}
+			</div>
+			{{/if}}
+			{{#if body}}
+			<div class="body-text">
+				{{{compile body @root}}}
+			</div>
+			{{/if}}
+			{{#if instruction}}
+			<div class="instruction-text">
+				{{{compile instruction @root}}}
+			</div>
+			{{/if}}
+		</div>
+		{{/ifor}}
+		{{#if _graphic}}
+		<div class="graphic">
+			<img src="{{_graphic}}">
+		</div>
+		{{/if}}
+		{{#ifor feedback}}
+		<div class="footer">
+			{{#if feedback}}
+			<div class="feedback-text">
+				{{{compile feedback @root}}}
+			</div>
+			{{/if}}
+		</div>
+		{{/ifor}}
+	</div>
+	{{#if _endOnContinue}}
+	<div class="continue-button-container">
+	<button class="continue-button iv-continue-button">
+		{{{continue}}}
+	</button>
+	</div>
+	{{/if}}
+	{{#if _endOnClose}}
+	<button class="close-button iv-close-button">
+
+	</button>
+	{{/if}}
+</div>

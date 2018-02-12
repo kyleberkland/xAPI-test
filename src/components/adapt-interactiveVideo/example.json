@@ -1,0 +1,23 @@
+[
+	{
+		"_id": "c-05",
+		"_parentId": "b-05",
+		"_type": "component",
+		"_component": "interactivevideo",
+		"_classes": "",
+		"_layout": "full",
+		"_attempts": 0,
+		"_questionWeight": 1,
+		"_canShowModelAnswer": true,
+		"_shouldDisplayAttempts": false,
+		"title": "",
+		"displayTitle": "",
+		"body": "",
+		"instruction": "",
+		"_interactiveVideoScoreToPass": 20,
+		"_interactiveVideoPath": "course/en/video/interactive",
+		"_pageLevelProgress": {
+			"_isEnabled": true
+		}
+	}
+]

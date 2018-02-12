@@ -1,0 +1,77 @@
+.sprite-mcq {
+
+    .outer {
+        position: absolute;
+        top: 2em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .inner {
+        position:relative;
+        top: 23%;
+        text-align: center;
+        color: white;
+    }
+
+	.selector-button {
+
+        padding: 6px;
+
+		.item-icon {
+			display:inline-block;
+			overflow:hidden;
+		}
+
+		&.radio .item-icon {
+            width:1.2em;
+            height:1.2em;
+            &:before {
+            	font-family: vanilla;
+                content: "\e65e";
+            }
+        }
+
+        &.checkbox .item-icon {
+            &:before {
+            	font-family: vanilla;
+                content: " ";
+            }
+            border: 0.2em solid @item-text-color;
+            width:1em;
+            height:1em;
+            font-size:1em;
+            font-weight: bold;
+            border-radius: 0.2em;
+        }
+
+		&.selected.radio .item-icon {
+            &:before {
+            	font-family: vanilla;
+                content: "\e65d";
+            }
+        }
+
+		&.selected.checkbox .item-icon {
+            &:before {
+            	font-family: vanilla;
+                content: "\e633";
+            }
+            border: 0.2em solid @item-text-color-selected;
+            width:1em;
+            height:1em;
+            font-size:1em;
+            font-weight: bold;
+            border-radius: 0.1em;
+        }
+	}
+
+}

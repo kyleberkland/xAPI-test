@@ -1,0 +1,44 @@
+.sprite.sprite-subvideo {
+
+    .video.light &, 
+    .video .sprites.light &,
+    .video .sprites &.light {
+        .mejs-controls {
+            .iv-clickable_light;
+        }
+
+        .mejs-controls .mejs-time-rail .mejs-time-current {
+            background: white;
+        }
+
+        .mejs-controls .mejs-time-rail .mejs-time-total {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .mejs-captions-text {
+            background: rgba(0, 0, 0, 0.5) !important;
+            color: white;
+        }
+    }
+
+    .video.dark &, 
+    .video .sprites.dark &,
+    .video .sprites &.dark {
+        .mejs-controls {
+            .iv-clickable_dark;
+        }
+
+        .mejs-controls .mejs-time-rail .mejs-time-current {
+            background: black;
+        }
+
+        .mejs-controls .mejs-time-rail .mejs-time-total {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .mejs-captions-text {
+            background: rgba(255, 255, 255, 0.5) !important;
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+// ====================================================================================================
+// Component styling
+// ====================================================================================================
+.component {
+	.component-title {
+		.headings-color(color);
+		margin-bottom: @component-title-margin-bottom;
+	}
+
+	.component-body {
+		margin-top: @component-body-margin-top;
+
+		a {
+			color: @font-body-color;
+			text-decoration: underline;
+		}
+	}
+
+	.component-instruction {
+		.instruction-text;
+		margin-top: @component-body-margin-top;
+		margin-bottom: @component-instruction-margin-bottom;
+
+		a {
+			color: @font-body-color;
+			text-decoration: underline;
+		}
+	}
+
+	.component-instruction-inner {
+		&.validation-error {
+			color: @validation-error-text-color;
+
+			a {
+				color: @validation-error-text-color;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&.component-medium {
+		margin: auto;
+		max-width: @device-width-medium;
+
+		.component-title,
+		.component-body,
+		.component-instruction {
+			text-align: center;
+		}
+	}
+
+	.component-widget {
+		margin-top: @component-margin-top;
+	}
+
+	// to replicate padding between blocks when components drop into a single column
+	&:first-child {
+		@media (max-width: @device-width-medium) {
+			padding-bottom: @block-padding / 2;
+		}
+
+		@media (max-width: @device-width-small) {
+			padding-bottom: @block-padding / 3;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+// ====================================================================================================
+// Article styling
+// ====================================================================================================
+.article {
+	&.nth-child-1 {
+		.theme-element-padding(@first-article-top-padding, 0);
+	}
+
+	.article-inner {
+		.theme-element-padding(@article-padding, @article-padding);
+	}
+
+	.article-header {
+		.theme-responsive-sizes();
+		.theme-element-padding(@article-header-padding, 0);
+	}
+
+	.article-title {
+		.headings-color(color);
+		margin-bottom: @article-title-margin-bottom;
+	}
+
+	.article-body {
+		margin-top: @article-body-margin-top;
+
+		a {
+			color: @font-body-color;
+			text-decoration: underline;
+		}
+	}
+
+	.article-instruction {
+		.instruction-text;
+		margin-top: @article-body-margin-top;
+		margin-bottom: @article-instruction-margin-bottom;
+
+		a {
+			color: @font-body-color;
+			text-decoration: underline;
+		}
+	}
+}

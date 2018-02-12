@@ -1,0 +1,87 @@
+.interactivevideo-container {
+	position:relative;
+	width:100%;
+	height: 100%;
+	z-index: 0;
+	overflow: visible;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	&.in-fullwindow {
+		//background-color: iv-background-color
+   		z-index: 2000;
+
+   		//accomodate extra space for navigation height mismatch
+   		.ios-fix {
+   			.iPhone &, .iOS &, .iPad & {
+				position:absolute;
+				top:0;
+				left:0;
+				width: 100%;
+				height:1000% !important;
+				background-color: inherit;
+			}
+		}
+	}
+
+	&.in-fullwindow {
+	    position:fixed;
+	    top:0;
+	    left:0;
+	}
+	
+	.preloader {
+		height: 0px;
+		overflow: hidden;
+	}
+
+	.no-select {
+	    -webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -khtml-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	}
+
+	p {
+	    margin-top: 0.2em;
+	    margin-bottom: 0.6em;
+	}
+
+
+
+	button::-moz-focus-inner {
+		border: 0;
+	}
+
+	button,
+	button:active {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+}
+
+html.in-fullwindow-view,
+html.in-fullscreen-view {
+	&.iPhone, &.iPad, &.iOS {
+		// .page, .menu, .navigation {
+		// 	display: none;
+		// }
+		.interactivevideo-container {
+			z-index: 2000;
+		}
+		/*height: 100%;*/
+		/*position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;*/
+
+		/*body {
+			height: 100%;
+		}*/
+		
+	}
+}

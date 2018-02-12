@@ -1,0 +1,12 @@
+// to be added to course/config.json
+{
+	"_xapi": {
+		"_isEnabled": true,
+		"_activityID" : "http://example.com/my_unique_identifier",
+		"_tracking": {
+			"_requireCourseCompleted": true,
+			"_requireAssessmentPassed": false,
+			"_shouldSubmitScore": false
+		}
+	}
+}

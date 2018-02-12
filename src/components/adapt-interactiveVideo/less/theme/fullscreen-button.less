@@ -1,0 +1,66 @@
+
+
+.iv-fullscreen-button {
+    font-size: 0.8em !important;
+    border: 0px;
+    padding: 0.4em 0.6em;
+
+    .iv-border-radius;
+
+    .video.light &, 
+    .video .sprites.light &,
+    .video .sprites .sprite.light & {
+        .iv-clickable_light;
+    }
+
+    .touch .video.light &:hover, 
+    .touch .video .sprites.light &:hover,
+    .touch .video .sprites .sprite.light &:hover {
+        .iv-clickable_hover_light;
+    }
+    
+    .no-touch .video.light &:hover, 
+    .no-touch .video .sprites.light &:hover,
+    .no-touch .video .sprites .sprite.light &:hover {
+        .iv-clickable_hover_light;
+    }
+
+    .video.dark &, 
+    .video .sprites.dark &,
+    .video .sprites .sprite.dark & {
+        .iv-clickable_dark;
+    }
+
+    .touch .video.dark &:hover, 
+    .touch .video .sprites.dark &:hover,
+    .touch .video .sprites .sprite.dark &:hover {
+        .iv-clickable_hover_dark;
+    }
+    
+    .no-touch .video.dark &:hover, 
+    .no-touch .video .sprites.dark &:hover,
+    .no-touch .video .sprites .sprite.dark &:hover {
+        .iv-clickable_hover_dark;
+    }
+
+    .iPhone & {
+        display: none !important;
+    }
+
+    &:before  {
+        content: '\e000';
+        font-family: "VideoJS";
+        height: 1.4em;
+        width: 1.4em;
+        font-size: 1em;
+    }
+
+    &.in-fullscreen:before {
+        content: '\e00b';
+        font-family: "VideoJS";
+        height: 1.4em;
+        width: 1.4em;
+        font-size: 1em;
+    }
+}
+

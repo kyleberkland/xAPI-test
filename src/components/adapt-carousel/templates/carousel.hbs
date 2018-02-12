@@ -1,0 +1,21 @@
+<div class="carousel-inner component-inner" role="region" aria-label="{{_globals._components._carousel.ariaRegion}}">
+    {{> component this}}
+
+    <div class="component-widget carousel-widget">
+
+        <div class="carousel-grid">
+            <div class="carousel-grid-inner clearfix">
+                
+                {{#each _items}}
+                <div class="carousel-grid-item {{#if visited}}visited{{/if}}">
+                    
+                    <img src="{{_graphic.src}}"/>
+                        
+                </div>
+                {{/each}}
+                
+            </div>
+        </div>
+
+    </div>
+</div>

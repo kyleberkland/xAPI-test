@@ -1,0 +1,45 @@
+.iv-play-button {
+    font-size:1em;
+	height: 4em;
+	width: 4em;
+    background-image: url("../../assets/interactive-play-dark.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    padding: 0;
+    border: 0px solid black;
+    background-size: contain;
+
+    &:hover {
+        background-color: transparent !important;
+        background-repeat: no-repeat;
+    }
+
+
+    .video.light &, 
+    .video .sprites.light &,
+    .video .sprites .sprite.light & {
+
+        background-image: url("../../assets/interactive-play.svg");
+
+        .touch &:hover {
+            background-image: url("../../assets/interactive-play-dark.svg");
+        }
+        .no-touch &:hover {
+            background-image: url("../../assets/interactive-play-dark.svg");
+        }
+    }
+
+    .video.dark &, 
+    .video .sprites.dark &,
+    .video .sprites .sprite.dark & {
+        
+        background-image: url("../../assets/interactive-play-dark.svg");
+
+        .touch &:hover {
+            background-image: url("../../assets/interactive-play.svg");
+        }
+        .no-touch &:hover {
+            background-image: url("../../assets/interactive-play.svg");
+        }
+    }
+}

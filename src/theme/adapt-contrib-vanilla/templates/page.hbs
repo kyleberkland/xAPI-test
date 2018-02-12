@@ -1,0 +1,63 @@
+{{! make the _globals object in course.json available to this template}}
+{{import_globals}}
+
+<div class="page-inner article-container">
+	{{{a11y_aria_label _accessibility._ariaLabels.page}}}
+
+	<div class="page-header{{#if _theme._pageHeader._showScrollButton}} has-scroll{{/if}}">
+		<div class="page-header-inner clearfix">
+
+			<div class="page-header-content">
+				<div class="page-header-content-inner">
+
+					{{#if displayTitle}}
+					<div class="page-title {{#if _theme._headings._isEnabled}}{{{_theme._headings._pageHeading}}}{{/if}}">
+						<div class="page-title-inner h1" aria-level="1" role="heading" tabindex="0">
+							{{#if _theme._headings._isEnabled}}{{#if_value_equals _theme._headings._pageHeading "magazine"}}<span><span>{{/if_value_equals}}{{/if}}
+							{{{compile displayTitle this}}}
+							{{#if _theme._headings._isEnabled}}{{#if_value_equals _theme._headings._pageHeading "magazine"}}</span></span>{{/if_value_equals}}{{/if}}
+						</div>
+					</div>
+					{{/if}}
+
+					{{#if body}}
+					<div class="page-body">
+						<div class="page-body-inner">
+							{{#if pageBody}}
+							{{{compile_a11y_text pageBody this}}}
+							{{else}}
+							{{{compile_a11y_text body this}}}
+							{{/if}}
+						</div>
+					</div>
+					{{/if}}
+
+					{{#if instruction}}
+					<div class="page-instruction">
+						<div class="page-instruction-inner">
+							{{{compile_a11y_text instruction}}}
+						</div>
+					</div>
+					{{/if}}
+
+				</div>
+			</div>
+
+			{{#if _theme._pageHeader._showScrollButton}}
+			<div class="page-header-scroll-button">
+				<button class="base page-header-scroll-button-inner icon icon-controls-down a11y-ignore" tabindex="-1" aria-hidden="true"></button>
+			</div>
+			{{/if}}
+
+		</div>
+	</div>
+
+</div>
+
+{{#if _theme._pageFooter._isEnabled}}
+<div class="page-footer">
+	<div class="page-footer-inner clearfix"></div>
+</div>
+{{/if}}
+
+<div class="aria-label relative a11y-ignore-focus prevent-default" role="region" tabindex="0">{{_globals._accessibility._ariaLabels.pageEnd}}</div>

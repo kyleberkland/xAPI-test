@@ -1,0 +1,93 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required":false,
+  "properties":{
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object",
+          "properties":{
+            "_xapi": {
+              "type":"object",
+              "required":false,
+              "legend": "xAPI",
+              "properties":{
+                "_isEnabled": {
+                  "type":"boolean",
+                  "required":true,
+                  "default": true,
+                  "title":"Is Enabled",
+                  "inputType": {"type": "Boolean", "options": [true, false]},
+                  "validators": [],
+                  "help": "If set to 'true', this course will be tracked by xAPI"
+                },
+                "_activityID": {
+                  "type":"string",
+                  "required":true,
+                  "title":"Activity ID",
+                  "default": "",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "Unique identifier for this xAPI activity. (Usually the URL to the course.)"
+                },
+                "_tracking": {
+                  "type":"object",
+                  "required":false,
+                  "title": "Tracking",
+                  "properties":{
+                    "_requireAssessmentPassed": {
+                      "type":"boolean",
+                      "required":false,
+                      "default": false,
+                      "title":"Assessment pass required",
+                      "inputType": {"type": "Boolean", "options": [true, false]},
+                      "validators": [],
+                      "help": ""
+                    },
+                    "_requireCourseCompleted": {
+                      "type":"boolean",
+                      "required":false,
+                      "default":true,
+                      "title":"Course completion required",
+                      "inputType": {"type": "Boolean", "options": [true, false]},
+                      "validators": [],
+                      "help": ""
+                    },
+                    "_shouldSubmitScore": {
+                      "type":"boolean",
+                      "required":false,
+                      "default": false,
+                      "title":"Submit score",
+                      "inputType": {"type": "Boolean", "options": [true, false]},
+                      "validators": [],
+                      "help": ""
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "course": {
+          "type":"object"
+        },
+        "contentobject": {
+          "type":"object"
+        },
+        "article": {
+          "type":"object"
+        },
+        "block": {
+          "type":"object"
+        },
+        "component": {
+          "type":"object"
+        }
+      }
+    }
+  }
+}

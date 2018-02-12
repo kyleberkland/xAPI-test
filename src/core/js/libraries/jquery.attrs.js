@@ -1,0 +1,2 @@
+//JQUERY DOM ATTRIBUTES GET/SET AS OBJECT
+$.fn.attrs = $.fn.attrs || function(a){var t=$(this);if(a){for(var i=0,l=t.length;i<l;i++){var e=t[i];var j=$(e);for(var s in a){j.attr(s,a[s])}}return t}else{var a={},r=t.get(0);if(r){r=r.attributes;for(var i in r){var p=r[i];if(!p)continue;if(typeof p.value!='undefined')a[p.nodeName]=p.value}}return a}};

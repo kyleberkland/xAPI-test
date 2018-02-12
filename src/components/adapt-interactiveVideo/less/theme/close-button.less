@@ -1,0 +1,59 @@
+.iv-close-button {
+    .iv-border-radius;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: auto;
+    padding: 0.4em 0.6em !important;
+    font-size: 0.8em !important;
+
+    &:before {
+        content: @fa-var-close;
+        font-family: 'fontawesome';
+        height: 1.2em;
+        width: 1.2em;
+        padding: 0.2em;
+        font-weight: lighter;
+        font-size: 1em;
+    }
+
+
+    .video.light &, 
+    .video .sprites.light &,
+    .video .sprites .sprite.light & {
+        color: white;
+        .iv-clickable_light;
+    }
+
+    .touch .video.light &:hover, 
+    .touch .video .sprites.light &:hover,
+    .touch .video .sprites .sprite.light &:hover {
+        .iv-clickable_hover_light;
+    }
+    
+    .no-touch .video.light &:hover, 
+    .no-touch .video .sprites.light &:hover,
+    .no-touch .video .sprites .sprite.light &:hover {
+        .iv-clickable_hover_light;
+    }
+
+    .video.dark &, 
+    .video .sprites.dark &,
+    .video .sprites .sprite.dark & {
+        color: black;
+        .iv-clickable_dark;
+    }
+
+    .touch .video.dark &:hover, 
+    .touch .video .sprites.dark &:hover,
+    .touch .video .sprites .sprite.dark &:hover {
+        .iv-clickable_hover_dark;
+    }
+    
+    .no-touch .video.dark &:hover, 
+    .no-touch .video .sprites.dark &:hover,
+    .no-touch .video .sprites .sprite.dark &:hover {
+        .iv-clickable_hover_dark;
+    }
+
+}

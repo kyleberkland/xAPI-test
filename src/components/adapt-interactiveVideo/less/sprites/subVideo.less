@@ -1,0 +1,179 @@
+.sprite-subvideo {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    background: #000;
+    height: 100%;
+    width: 100%;
+
+    .sprite-subvideo-inner,
+    .outer,
+    .outer .inner,
+    .outer .media, 
+    .outer .mediaelement-widget {
+        height:100%;
+        width: 100%;
+        overflow: hidden !important;
+    }
+
+    .outer-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 1.2em;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 2em;
+        left: 0;
+        right:0;
+        bottom: 2em;
+        transition: opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+    }
+
+    .overlay .inner {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+    .sprite-subvideo-inner {
+
+        .title-text{
+            background: rgba(0,0,0,0.3);
+            width: 300px;
+            padding: 20px;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            font-weight: bold;
+        }
+
+        &.paused {
+            
+            .overlay {
+                opacity: 1;
+            }
+
+            .cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 1.2em;
+                right: 0;
+            }
+        }
+    
+        &.playing .overlay {
+            opacity: 0;
+        }
+
+        &.hidden .play-button {
+            display: none;
+        }
+
+    }  
+
+    .mejs-controls {
+        height: 1.2em !important;
+    }
+
+    .mejs-container .mejs-controls div {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100% !important;
+        height: 100% !important;
+        padding-top: auto;
+        font-size: inherit;
+    }
+
+    .mejs-captions-layer  {
+        line-height: 1.4em;
+        font-size:1.4em;
+    }
+
+    .mejs-button.mejs-captions-button.mejs-captions-enabled {
+        display: none;
+        width: 0 !important;
+    }
+
+    .mejs-controls .mejs-time-rail .mejs-time-total {
+        height: auto;
+        margin: 0.4em 0.2em;
+        width: auto !important;
+        top: 0;
+        left: 1em;
+        bottom: 0;
+        right: 0;
+    }
+
+    .mejs-controls .mejs-playpause-button {
+        font-size: 1em;
+        
+
+        button {
+            
+            font-family: VideoJS;
+            width:2em;
+            height:2em;
+            padding:0.2em 0.2em;
+            font-size:0.6em;
+            margin:0;
+            background-image: none !important;
+
+            &:focus {
+                outline: none !important;
+            }
+
+            &:before {
+                text-align: center;
+                content: "";
+                font-family: VideoJS;
+            }
+
+        }
+
+        &.mejs-play {
+
+            button:before {
+                content: "";
+                font-family: VideoJS;
+            }
+
+        }
+    }
+
+    .mejs-controls .mejs-time-rail .mejs-time-current {
+        height: 100%;
+    }
+
+    .mejs-captions-position-hover {
+        bottom: 1.5em;
+    }
+
+    .mejs-overlay-play,
+    .mejs-time-loaded,
+    .mejs-time-buffering,
+    .mejs-time-float {
+        display:none !important;
+    }
+
+    .mejs-container {
+        .iv-transparent-background-important;
+        height:100% !important;
+        width:100% !important;
+    }
+
+    inlinevideo {
+        height: 100%;
+    }
+
+}

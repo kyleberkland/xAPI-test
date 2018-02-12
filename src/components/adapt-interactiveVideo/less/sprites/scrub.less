@@ -1,0 +1,74 @@
+.sprite.sprite-scrub {
+	position:absolute;
+	top: auto;
+	bottom:0;
+	left:0;
+	right:0;
+	height: 1.2em;
+	z-index:20 !important;
+	opacity: 1;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+	
+	&.locked {
+		opacity: 0 !important;
+	}
+
+	.play-pause {
+
+		button {
+		 	
+			font-family: VideoJS;
+			width:2em;
+			padding:0.2em 0.2em;
+			font-size:0.6em;
+			margin:0;
+			background:transparent;
+
+
+		 	&:before {
+		 		text-align: center;
+				content: "";
+				font-family: VideoJS;
+				
+				.paused & {
+					content: "";
+					font-family: VideoJS;
+				}
+			}
+
+		}
+
+	}
+	
+	.outer {
+		position: absolute;
+		margin: 0.4em 0.2em;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+    	border-radius: 2px;
+    	cursor: pointer;    
+    	overflow: hidden;
+
+    	&.play-pause-padding {
+    		left:1em;
+    	}
+	}
+
+	.inner {
+		width:0%;
+		height:100%;
+	}
+
+
+	.scrub-sprite-marker {
+	    width: 0.1em;
+	    height: 100%;
+	    position: absolute;
+	    &.visited {
+		}
+	}
+
+}

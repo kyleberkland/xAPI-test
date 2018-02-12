@@ -1,0 +1,26 @@
+<div class="outer">
+	<div class="inner">
+		{{#if _items}}
+			<div class="items">
+			{{#each _items}}
+				<button class="item-button {{_className}} {{#if isGraphicOnly}}graphic-only{{/if}} {{#if isVisited}}visited{{else}}not-visited{{/if}} {{#if isSelected}}selected{{else}}not-selected{{/if}} {{#if isDisabled}}disabled{{/if}}" {{#if isDisabled}}disabled="disabled"{{/if}} index="{{@index}}" style="{{_cssStyle}}">
+					{{#if _backgroundGraphic}}
+						<div class="background-graphic" style="background-image:url({{_backgroundGraphic}});">
+						</div>
+					{{/if}}
+					{{#if text}}
+						<span class="item-button-text">
+						{{{compile text @root}}}
+						</span>
+					{{/if}}
+					{{#if _graphic}}
+						<div class="graphic">
+							<img src="{{_graphic}}">
+						</div>
+					{{/if}}
+				</button>
+			{{/each}}
+			</div>
+		{{/if}}
+	</div>
+</div>

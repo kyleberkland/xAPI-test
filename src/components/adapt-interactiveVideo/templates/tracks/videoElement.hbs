@@ -1,0 +1,19 @@
+<video preload="none" playsinline="playsinline" poster="{{_media.poster}}" width="960" height="540" style="width:100%; height:100%;" controls="none" {{#if loop}}loop="loop"{{/if}}>
+  {{#if_value_equals platform "ios"}}
+    <source src="{{_media.mp4}}.low.{{_media.extension}}" audio="{{_media.mp4}}.mp3" type="video/{{_media.extension}}"/>
+  {{/if_value_equals}}
+  {{#if_value_equals platform "android"}}
+    <source src="{{_media.mp4}}.low.{{_media.extension}}" audio="{{_media.mp4}}.mp3" type="video/{{_media.extension}}"/>
+  {{/if_value_equals}}
+  {{#if_value_equals platform "computer"}}
+    {{#if_value_equals speed "fast"}}
+    <source src="{{_media.mp4}}" audio="{{_media.mp4}}.mp3" type="video/mp4"/>
+    {{else}}
+    <source src="{{_media.mp4}}.medium.{{_media.extension}}" audio="{{_media.mp4}}.mp3" type="video/mp4"/>
+    {{/if_value_equals}}
+  {{/if_value_equals}}
+  
+  {{#if _media.cc}}
+    <track kind="subtitles" src="{{_media.cc.src}}" type="text/vtt" srclang="{{_media.cc.srclang}}" />
+  {{/if}}
+</video>

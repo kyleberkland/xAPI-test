@@ -1,0 +1,42 @@
+.interactivevideo-container .sprites-container {
+
+	.track-loading-container {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    width: 100%;
+	    display:table;
+	    z-index: 20000;
+	    
+	    background: rgba(0, 0, 0, 0.6);
+
+	    .loader-gif {
+	    	background-image: url(assets/ajax-loader.gif);
+	    	background-size: cover; 
+	    	height: 4.5em;
+		    width: 4.5em;
+		    text-align: center;
+		    display: inline-block;
+	    }
+	}
+
+	&.track-loading {
+		.track-loading-container {
+	    	display: table !important;
+	    }
+	}
+
+    &.track-not-loading {
+	    .track-loading-container {
+	    	display: none !important;
+	    }
+	}
+
+	.track-loading-inner {
+	    display: table-cell;
+	    vertical-align: middle;
+	    text-align: center;
+	}
+	
+}

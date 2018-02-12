@@ -1,0 +1,28 @@
+.inlinemediaelement-widget {
+    height:100%;
+    width:100%;
+    margin: auto;
+
+    .inlinevideocontainer {
+        width:100%;
+    }
+
+}
+
+.track .inlinevideo-scrub-bar {
+    display:none;
+}
+
+.interactivevideo-container {
+	&.in-fullwindow.is-wider-ratio {
+        .inlinevideocontainer {
+            height: 100% !important;
+            width:auto;
+
+            video {
+            	height: 100% !important;
+            	width:auto;	
+            }
+        }   
+    }
+}
